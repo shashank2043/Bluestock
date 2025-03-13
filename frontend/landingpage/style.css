@@ -320,8 +320,6 @@ p {
   font-weight: 500;
 }
 
-
-
 @media (max-width: 991px) {
   .hero-section h1 {
     font-size: 2.25rem;
@@ -329,5 +327,169 @@ p {
 
   .hero-section .input-group {
     width: 100%;
+  }
+}
+
+/* Animated section */
+
+.halfpage div div {
+  height: 50vh;
+}
+.animated {
+  padding: 1rem 6rem;
+  overflow: visible;
+  position: relative;
+  margin: 4rem 0;
+}
+
+.animated-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.animated-title-easy {
+  position: relative;
+  left: 3px;
+  margin-top: 65px;
+  color: #ad00ff;
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.animated-title-powerful {
+  position: relative;
+  left: 0;
+  margin-top: 20px;
+  color: black;
+  font-size: 51px;
+  font-weight: 700;
+}
+
+.animated-title-beautiful {
+  position: relative;
+  left: 0;
+  margin-top: 20px;
+  color: #ad00ff;
+  font-size: 55px;
+  font-weight: 700;
+}
+
+.animated-subtitle {
+  position: relative;
+  left: 3px;
+  color: #9a9a9a;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.animated-description {
+  position: relative;
+  width: 100%;
+  max-width: 423px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 20px 0;
+  margin-top: 2rem;
+}
+
+.animated-description .highlight {
+  color: black;
+}
+
+.animated-description .text-muted {
+  color: #595959;
+}
+
+.animated-icon {
+  position: relative;
+  width: 107px;
+  height: 104px;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 1400px) {
+  .animated-description {
+    position: absolute;
+    right: 0;
+    top: 146px;
+    margin-top: 0;
+  }
+
+  .animated-icon {
+    position: absolute;
+    right: 158px;
+    top: 26px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .animated {
+    padding: 1rem 2rem;
+    margin: 2rem 0;
+  }
+
+  .animated-title-easy {
+    font-size: 48px;
+    margin-top: 45px;
+  }
+
+  .animated-title-powerful {
+    font-size: 40px;
+    margin-top: 15px;
+  }
+
+  .animated-title-beautiful {
+    font-size: 44px;
+    margin-top: 15px;
+  }
+
+  .animated-subtitle {
+    font-size: 20px;
+  }
+
+  .animated-description {
+    font-size: 20px;
+    padding: 15px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .animated {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .animated-title-easy {
+    font-size: 36px;
+    margin-top: 35px;
+  }
+
+  .animated-title-powerful {
+    font-size: 32px;
+    margin-top: 12px;
+  }
+
+  .animated-title-beautiful {
+    font-size: 34px;
+    margin-top: 12px;
+  }
+
+  .animated-subtitle {
+    font-size: 18px;
+  }
+
+  .animated-description {
+    font-size: 18px;
+    padding: 10px 0;
   }
 }
