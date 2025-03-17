@@ -574,3 +574,24 @@ p {
   margin-right: 12px;
   padding: 0;
 }
+
+.shark-invester h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-left: 1rem;
+  color: #000;
+}
+.shark-investern p {
+  color: #9A9A9A;
+  font-size: 1.1rem;
+}
+
+@media (max-width: 991px) {
+  .shark-invester h1 {
+    font-size: 2.25rem;
+  }
+  .shark-invester p {
+    font-size: 0.9rem;
+  }
+}
