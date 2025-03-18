@@ -603,10 +603,23 @@ p {
   margin: 1rem 0;
   color: #000;
 }
-.onthego-text p, .generalp {
+.onthego-text p,
+ .generalp {
   color: #9A9A9A;
   font-size: 1.1rem;
+  margin: 1rem 0;
 }
+
+@media (max-width: 991px) {
+  .onthego-text h1 {
+    font-size: 2.25rem;
+  }
+  .generalp p,
+  .onthego-text p {
+    font-size: 0.9rem;
+  }
+}
+
 
 .bluetext{
   color: #0013F4;
@@ -616,4 +629,9 @@ p {
   background-color: #34F3C3;
   width: fit-content;
   min-width: 180px;
+}
+
+.smallp{
+  color: #9A9A9A;
+  font-size: 0.7rem;
 }
