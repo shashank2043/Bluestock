@@ -582,7 +582,7 @@ p {
   margin-left: 1rem;
   color: #000;
 }
-.shark-investern p {
+.shark-invester p {
   color: #9A9A9A;
   font-size: 1.1rem;
 }
@@ -594,4 +594,26 @@ p {
   .shark-invester p {
     font-size: 0.9rem;
   }
+}
+
+.onthego-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 1rem 0;
+  color: #000;
+}
+.onthego-text p, .generalp {
+  color: #9A9A9A;
+  font-size: 1.1rem;
+}
+
+.bluetext{
+  color: #0013F4;
+}
+
+.resources{
+  background-color: #34F3C3;
+  width: fit-content;
+  min-width: 180px;
 }
