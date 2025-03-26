@@ -89,3 +89,78 @@ animateText();
 
 // Cycle every 3 seconds
 setInterval(animateText, 3000);
+
+
+
+// Drag Scroll
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollContainer = document.getElementById("scrollContainer");
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  // Scroll using buttons
+  function scrollLeftFunc() {
+      scrollContainer.scrollBy({ left: -350, behavior: "smooth" });
+  }
+
+  function scrollRightFunc() {
+      scrollContainer.scrollBy({ left: 350, behavior: "smooth" });
+  }
+
+  document.querySelector(".scroll-btn.left").addEventListener("click", scrollLeftFunc);
+  document.querySelector(".scroll-btn.right").addEventListener("click", scrollRightFunc);
+
+  // Drag Scrolling for Mouse
+  scrollContainer.addEventListener("mousedown", (e) => {
+      isDown = true;
+      startX = e.pageX;
+      scrollLeft = scrollContainer.scrollLeft;
+      scrollContainer.style.scrollBehavior = "auto"; // Disable smooth scrolling when dragging
+  });
+
+  scrollContainer.addEventListener("mouseleave", () => {
+      isDown = false;
+  });
+
+  scrollContainer.addEventListener("mouseup", () => {
+      isDown = false;
+  });
+
+  scrollContainer.addEventListener("mousemove", (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX;
+      const walk = startX - x; // Direct movement mapping
+      scrollContainer.scrollLeft = scrollLeft + walk;
+  });
+
+  // Touch events for mobile scrolling
+  let touchStartX = 0;
+
+  scrollContainer.addEventListener("touchstart", (e) => {
+      touchStartX = e.touches[0].clientX;
+      scrollContainer.style.scrollBehavior = "auto"; // Disable smooth scrolling on touch
+  });
+
+  scrollContainer.addEventListener("touchmove", (e) => {
+      let touchEndX = e.touches[0].clientX;
+      let moveX = touchStartX - touchEndX;
+      scrollContainer.scrollLeft += moveX; // Move exactly as per touch
+      touchStartX = touchEndX;
+  });
+
+  // Enable smooth scrolling back after interaction
+  scrollContainer.addEventListener("mouseup", () => {
+      scrollContainer.style.scrollBehavior = "smooth";
+  });
+
+  scrollContainer.addEventListener("touchend", () => {
+      scrollContainer.style.scrollBehavior = "smooth";
+  });
+});
+
+// Auto Scroll to the bottom of the page
+window.onload = function () {
+  window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+};

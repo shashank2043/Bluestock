@@ -527,7 +527,7 @@ p {
   color: #000;
 }
 .heighlight-description p {
-  color: #9A9A9A;
+  color: #9a9a9a;
   font-size: 1.1rem;
 }
 
@@ -540,21 +540,19 @@ p {
   }
 }
 
-.card-header h4{
-  color: #0013F4;
+.card-header h4 {
+  color: #0013f4;
 }
 
 .learnchart-card {
-  background-color: #F7F5FD !important;
+  background-color: #f7f5fd !important;
 }
-.analytics-card{
-  background-color: #FFECEC!important;
+.analytics-card {
+  background-color: #ffecec !important;
 }
-.club-card{
-  background-color: #FFF0DB!important;
+.club-card {
+  background-color: #fff0db !important;
 }
-
-
 
 .list-group-numbered > .list-group-item {
   display: flex;
@@ -563,7 +561,7 @@ p {
 }
 
 .list-group-numbered > .list-group-item::before {
-  background-color: #3CBB00;
+  background-color: #3cbb00;
   color: white;
   border-radius: 50%;
   width: 24px;
@@ -583,7 +581,7 @@ p {
   color: #000;
 }
 .shark-invester p {
-  color: #9A9A9A;
+  color: #9a9a9a;
   font-size: 1.1rem;
 }
 
@@ -604,8 +602,8 @@ p {
   color: #000;
 }
 .onthego-text p,
- .generalp {
-  color: #9A9A9A;
+.generalp {
+  color: #9a9a9a;
   font-size: 1.1rem;
   margin: 1rem 0;
 }
@@ -620,18 +618,165 @@ p {
   }
 }
 
-
-.bluetext{
-  color: #0013F4;
+.bluetext {
+  color: #0013f4;
 }
 
-.resources{
-  background-color: #34F3C3;
+.resources {
+  background-color: #34f3c3;
   width: fit-content;
   min-width: 180px;
 }
 
-.smallp{
-  color: #9A9A9A;
+.smallp {
+  color: #9a9a9a;
   font-size: 0.7rem;
+}
+
+/* livenow section */
+/* Center content and make it responsive */
+.banner {
+  background-color: #eff4ff;
+}
+
+.banner p {
+  color: #9a9a9a;
+}
+
+/* Store Logos */
+.store-logo {
+  max-width: 150px; /* Default image size */
+  height: auto; /* Keeps aspect ratio */
+}
+
+/* Reduce size on medium and smaller screens */
+@media (max-width: 768px) {
+  .store-logo {
+      max-width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .store-logo {
+      max-width: 100px;
+  }
+}
+
+/* Ratings */
+/* General Section Styling */
+.ratings {
+  text-align: center;
+  padding: 50px 0;
+  position: relative;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+  display: inline-block;
+}
+
+/* Wrapper for title and buttons */
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+/* Buttons Positioned at Right End */
+.scroll-btn-container {
+  display: flex;
+  gap: 10px;
+}
+
+.scroll-btn {
+  background: white;
+  border: 1px solid #007bff;
+  color: #007bff;
+  padding: 9px 15px;
+  border-radius: 25%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.scroll-btn:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* Wrapper for Cards */
+.ratings-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+/* Scrollable Cards Container */
+.ratings-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+  white-space: nowrap;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+
+/* Hide Scrollbar for WebKit Browsers */
+.ratings-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* Individual Card Styling */
+.card {
+  min-width: 300px;
+  max-width: 350px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  flex: 0 0 auto;
+  text-align: left;
+  word-wrap: break-word; /* Ensures text wraps within the container */
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.card-body {
+  position: relative;
+}
+
+/* Quote Icon */
+.quote {
+  font-size: 40px;
+  font-weight: bold;
+  color: #007bff;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+/* User Name */
+.user-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Card Text */
+.card-text {
+  font-size: 14px;
+  color: #333;
+  white-space: normal;
+}
+.left {
+  position: relative; /* Ensure it remains part of the document flow */
+  left: 0; /* Keeps it aligned */
 }
